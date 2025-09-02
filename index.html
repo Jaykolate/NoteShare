@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Notes Platform - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container container">
+            <a href="#home" class="logo">📚 NoteShare</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active"> Home</a> </li>
+               
+                <li><a href="#upload">Upload</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+             <div class="mobile-menu" id="menu-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+             </div>
+        </div>
+    </nav>
+
+    <ul class="nav-links-mobile" id="nav-links-mobile">
+       <li><a href="#home">Home</a></li>
+       <hr>
+       <li><a href="#notes">Notes</a></li>
+       <hr>
+       <li><a href="#papers">Papers</a></li>
+       <hr>
+       <li><a href="#upload">Upload</a></li>
+       <hr>
+       <li><a href="#about">About</a></li>
+    </ul>
+
+    <main id="home" class="home-container">
+        <div class="hero-section" >
+            <h1>Welcome to NoteShare 📚</h1>
+            <p>Find Previous Year Papers and Notes easily</p>
+            <div class="button-group">
+                <a href="#papers" class="home-btn">🔍 Search Papers</a>
+                <a href="#notes" class="home-btn">📖 Search Notes</a>
+            </div>
+        </div>
+    </main>
+
+    <main id="notes" style="display: none;">
+        <section class="container">
+            <div class="section-heading">
+                <h2>Browse Notes</h2>
+                <p>Find study materials for your subjects</p>
+            </div>
+            <div class="filter-container">
+                <input type="text" id="searchInput" class="filter-input" placeholder="Search by subject or note title...">
+                <select id="yearFilter" class="filter-select">
+                    <option value="all">All Years</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                </select>
+                <select id="branchFilter" class="filter-select">
+                    <option value="all">All Branches</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Electronics">Electronics</option>
+                </select>
+                <select id="universityFilter" class="filter-select">
+                    <option value="all">All Universities</option>
+                    <option value="University of Pune">University of Pune</option>
+                    <option value="IIT Bombay">IIT Bombay</option>
+                </select>
+                <div class="filter-actions">
+                    <button id="applyFiltersBtn" class="btn">Apply Filters</button>
+                    <button id="resetFiltersBtn" class="btn">Reset Filters</button>
+                </div>
+            </div>
+
+            <div class="cards-grid" id="notes-grid">
+                <div class="card" data-branch="Computer Science" data-university="IIT Bombay">
+                    <h3>Operating Systems Concepts</h3>
+                    <div class="subject">Computer Science • Semester 5</div>
+                    <p>Detailed notes on process management, memory allocation, file systems, and synchronization.</p>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-primary">Preview</a>
+                        <a href="#" class="btn btn-outline">Download</a>
+                    </div>
+                </div>
+                <div class="card" data-branch="Electronics" data-university="University of Pune">
+                    <h3>Microprocessor Architecture</h3>
+                    <div class="subject">Electronics • Semester 6</div>
+                    <p>Comprehensive notes on 8085 and 8086 microprocessors, assembly language programming, and interfacing techniques.</p>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-primary">Preview</a>
+                        <a href="#" class="btn btn-outline">Download</a>
+                    </div>
+                </div>
+            </div>
+             <div class="show-more-container">
+                <button id="showMoreBtn" class="btn">Show More</button>
+             </div>
+        </section>
+    </main>
+
+    <main id="papers" style="display: none;">
+        <section class="container">
+            <div class="section-heading">
+                <h2>Browse Papers</h2>
+                <p>Find previous year question papers for your exams</p>
+            </div>
+            <div class="filter-container">
+                <input type="text" id="searchInputPapers" class="filter-input" placeholder="Search by subject or paper name...">
+                <select id="yearFilterPapers" class="filter-select">
+                    <option value="all">All Years</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                </select>
+                <select id="branchFilterPapers" class="filter-select">
+                    <option value="all">All Branches</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Electronics">Electronics</option>
+                </select>
+                <select id="universityFilterPapers" class="filter-select">
+                    <option value="all">All Universities</option>
+                    <option value="IIT Bombay">IIT Bombay</option>
+                    <option value="University of Pune">University of Pune</option>
+                </select>
+                <div class="filter-actions">
+                    <button id="applyFiltersBtnPapers" class="btn">Apply Filters</button>
+                    <button id="resetFiltersBtnPapers" class="btn">Reset Filters</button>
+                </div>
+            </div>
+
+            <div class="cards-grid" id="papers-grid">
+                <div class="card" data-year="2024" data-branch="Computer Science" data-university="IIT Bombay">
+                    <h3>Database Management Systems - Final Exam</h3>
+                    <div class="subject">Computer Science • Year 2024</div>
+                    <p>Official final examination paper for the DBMS course, including all sections and questions.</p>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-primary">Preview</a>
+                        <a href="#" class="btn btn-outline">Download</a>
+                    </div>
+                </div>
+                 <div class="card" data-year="2023" data-branch="Electronics" data-university="University of Pune">
+                    <h3>Digital Signal Processing - Mid Term</h3>
+                    <div class="subject">Electronics • Year 2023</div>
+                    <p>Mid-term question paper for the DSP course, covering topics from the first half of the semester.</p>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-primary">Preview</a>
+                        <a href="#" class="btn btn-outline">Download</a>
+                    </div>
+                </div>
+                <div class="card" data-year="2023" data-branch="Electronics" data-university="University of Pune">
+                    <h3>Digital Signal Processing - Mid Term</h3>
+                    <div class="subject">Electronics • Year 2023</div>
+                    <p>Mid-term question paper for the DSP course, covering topics from the first half of the semester.</p>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-primary">Preview</a>
+                        <a href="#" class="btn btn-outline">Download</a>
+                    </div>
+                </div>
+                <div class="card" data-year="2023" data-branch="Electronics" data-university="University of Pune">
+                    <h3>Digital Signal Processing - Mid Term</h3>
+                    <div class="subject">Electronics • Year 2023</div>
+                    <p>Mid-term question paper for the DSP course, covering topics from the first half of the semester.</p>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-primary">Preview</a>
+                        <a href="#" class="btn btn-outline">Download</a>
+                    </div>
+                </div>
+                <div class="card" data-year="2023" data-branch="Electronics" data-university="University of Pune">
+                    <h3>Digital Signal Processing - Mid Term</h3>
+                    <div class="subject">Electronics • Year 2023</div>
+                    <p>Mid-term question paper for the DSP course, covering topics from the first half of the semester.</p>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-primary">Preview</a>
+                        <a href="#" class="btn btn-outline">Download</a>
+                    </div>
+                </div>
+                <div class="card" data-year="2023" data-branch="Electronics" data-university="University of Pune">
+                    <h3>Digital Signal Processing - Mid Term</h3>
+                    <div class="subject">Electronics • Year 2023</div>
+                    <p>Mid-term question paper for the DSP course, covering topics from the first half of the semester.</p>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-primary">Preview</a>
+                        <a href="#" class="btn btn-outline">Download</a>
+                    </div>
+                </div>
+                <div class="card" data-year="2023" data-branch="Electronics" data-university="University of Pune">
+                    <h3>Digital Signal Processing - Mid Term</h3>
+                    <div class="subject">Electronics • Year 2023</div>
+                    <p>Mid-term question paper for the DSP course, covering topics from the first half of the semester.</p>
+                    <div class="card-actions">
+                        <a href="#" class="btn btn-primary">Preview</a>
+                        <a href="#" class="btn btn-outline">Download</a>
+                    </div>
+                </div>
+            </div>
+             <div class="show-more-container">
+                <button id="showMoreBtnPapers" class="btn">Show More</button>
+             </div>
+        </section>
+    </main>
+    
+    <main id="upload" style="display: none;">
+        <section class="container">
+            <div class="section-heading">
+                <h2>Upload Your Materials</h2>
+                <p>Share your study materials with fellow students</p>
+            </div>
+    
+            <div class="upload-choice">
+                <button id="showNotesFormBtn" class="choice-btn">Upload Notes</button>
+                <button id="showPyqFormBtn" class="choice-btn">Upload PYQ Paper</button>
+            </div>
+    
+            <div id="notes-form-container" class="form-wrapper" style="display: none;">
+                <div class="form-container">
+                    <form>
+                        <h3>Upload Notes</h3>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" name="title" placeholder="Enter note title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="e.g., Advanced Calculus" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="semester">Semester</label>
+                            <select id="semester" name="semester" required>
+                                <option value="">Select Semester</option>
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                                <option value="7">Semester 7</option>
+                                <option value="8">Semester 8</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea id="description" name="description" rows="4" placeholder="Briefly describe what your notes cover..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Select Your Material</label>
+                            <div class="file-upload">
+                                <input type="file" id="note-file-upload" accept=".pdf,.doc,.docx,.png,.jpg" multiple>
+                                <label for="note-file-upload" class="file-upload-label">
+                                    📁 Click to select file(s) or drag and drop<br>
+                                    <small>You can select multiple files</small>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Upload Notes</button>
+                    </form>
+                </div>
+            </div>
+    
+            <div id="pyq-form-container" class="form-wrapper" style="display: none;">
+                <div class="form-container">
+                    <form>
+                        <h3>Upload Previous Year Question Paper</h3>
+                        <div class="form-group">
+                            <label for="paper-subject">Subject of Paper</label>
+                            <input type="text" id="paper-subject" name="paper-subject" placeholder="e.g., Digital Electronics" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="paper-year">Year of Paper</label>
+                            <input type="number" id="paper-year" name="paper-year" placeholder="e.g., 2023" min="2000" max="2099" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="university">University / Board</label>
+                            <input type="text" id="university" name="university" placeholder="e.g., University of Pune" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Select Your Material</label>
+                            <div class="file-upload">
+                                <input type="file" id="pyq-file-upload" accept=".pdf,.doc,.docx,.png,.jpg" multiple>
+                                <label for="pyq-file-upload" class="file-upload-label">
+                                    📁 Click to select file(s) or drag and drop<br>
+                                    <small>You can select multiple files</small>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Upload Paper</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main id="about" style="display: none;">
+
+        <section class="container">
+
+            <div class="about-content">
+
+                <h2>About NoteShare Platform</h2>
+
+               
+
+                <p>Welcome to NoteShare, the premier platform for students to share and access high-quality study materials. Our mission is to create a collaborative learning environment where students can support each other's academic journey by sharing notes, past papers, and study resources.</p>
+
+               
+
+                <p>Founded by students, for students, we understand the challenges of finding reliable study materials. Whether you're preparing for exams, working on assignments, or trying to understand complex concepts, our platform connects you with peer-reviewed notes and past papers from various subjects and semesters.</p>
+
+               
+
+                <h2>Our Vision</h2>
+
+               
+
+                <p>We believe that knowledge should be accessible to everyone. By fostering a community of sharing and collaboration, we aim to improve academic outcomes for all students. Every note uploaded and downloaded contributes to a growing repository of knowledge that benefits the entire student community.</p>
+
+               
+
+                <h2>How It Works</h2>
+
+               
+
+                <p>Students can easily upload their notes, past papers, and study materials using our simple upload form. All uploads are reviewed for quality and relevance before being made available to the community. Users can browse materials by subject, semester, or use our search functionality to find exactly what they need.</p>
+
+               
+
+                <p>Join thousands of students who are already benefiting from our platform. Upload your notes today and help build the largest student-driven knowledge repository!</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="mailto:contact@noteshare.edu">📧 Contact</a>
+                <a href="#">📞 Support</a>
+                <a href="#">📋 Terms</a>
+                <a href="#">🔒 Privacy</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon">f</a>
+                <a href="#" class="social-icon">t</a>
+                <a href="#" class="social-icon">in</a>
+                <a href="#" class="social-icon">ig</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 NoteShare Platform. All rights reserved. | Made with ❤️ for students</p>
+            </div>
+        </div>
+    </footer>
+   
+    <script src="app.js"></script>
+</body>
+</html>

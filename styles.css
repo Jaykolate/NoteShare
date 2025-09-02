@@ -1,0 +1,661 @@
+/* CSS Styles for the entire website (Simplified) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  overflow-y: scroll;
+}
+
+/* ====== GLOBAL STYLES ====== */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  color: #212529;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ====== NAVBAR ====== */
+header {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+.nav-links a.active {
+  color: #007bff;
+}
+.nav-links a:hover {
+  color: #0056b3;
+}
+
+/* ====== CARDS ====== */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* ====== BUTTONS ====== */
+button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  
+}
+button:hover {
+  background: #0056b3;
+}
+
+/* ====== FORMS ====== */
+input, select, textarea {
+  width: 15%;
+  padding: 0.5rem;
+  margin-top: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #3a3939;
+    background-color: #e6ebeb;
+}
+/* Home Page Styles */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: #e6ebeb;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: #2563eb; /* blue */
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.home-btn:hover {
+    background: #1e40af; /* darker blue */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+
+/* --- Core Layout & Structure --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+main {
+    min-height: calc(100vh - 200px);
+    padding: 2rem 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+    font-size: 2.5rem;
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+}
+
+.section-heading p {
+    font-size: 1.1rem;
+    color: #476692;
+}
+
+/* Notes Section */
+.notes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.note-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-card:hover {
+    transform: translateY(-5px);
+}
+
+.note-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.note-content {
+    padding: 15px;
+}
+
+.note-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.note-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 8px 0 12px;
+}
+
+.note-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.view-btn {
+    background: #3498db;
+    color: #fff;
+}
+
+.download-btn {
+    background: #27ae60;
+    color: #fff;
+}
+
+.view-btn:hover {
+    background: #2980b9;
+}
+
+.download-btn:hover {
+    background: #1e8449;
+}
+
+
+/* --- Navigation Bar --- */
+nav {
+    background-color: #3b82f6;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.nav-links a.active {
+    color: #fbbf24; /* Active link color */
+    font-weight: bold;
+}
+
+/* --- Cards Grid --- */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0; /* Simple border instead of shadow */
+    padding: 1.5rem;
+}
+
+
+.card h3 {
+    color: #1e40af;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.card .subject {
+    color: #6366f1;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* --- Buttons (Simplified) --- */
+.btn {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+    transition: 1s ease-in-out;
+}
+.btn-outline:hover{
+    background-color: #3b82f6;
+    color: white;
+}
+
+.btn-submit {
+    background-color: #10b981;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* --- Upload Page Forms & Choices --- */
+.upload-choice {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.choice-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    background-color: #fafafa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: black;
+    border: 1px solid black;
+}
+
+.choice-btn.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+.choice-btn:hover {
+    background-color: #4e83bc;
+    border: 1.5px solid black;
+    transform: scale(1.05);
+}
+
+.form-wrapper h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.form-container {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0; /* Simple border */
+    padding: 2rem;
+    margin-bottom: 3rem;
+   
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #374151;
+}
+#applyFilterBtn:hover{
+    background-color: #3b82f6;
+    color: white;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.upload-type-choice {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.upload-type-choice input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.upload-type-choice label {
+    padding: 8px 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.upload-type-choice input[type="radio"]:checked + label {
+    border-color: #007bff;
+    color: #007bff;
+    background-color: #eef6ff;
+}
+
+.file-upload {
+    border: 2px dashed #3b82f6;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    background-color: #f8fafc;
+}
+
+.file-upload input {
+    display: none;
+}
+
+.file-upload-label {
+    cursor: pointer;
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+/* --- Note Filters --- */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.filter-input,
+.filter-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.filter-input {
+    flex-grow: 1;
+    min-width: 250px;
+}
+
+.filter-select {
+    background-color: white;
+    cursor: pointer;
+}
+
+/* --- "Show More" Button Logic --- */
+.cards-grid .card {
+   display: none; /* Hide cards by default for JS to handle */
+}
+
+.show-more-container {
+   text-align: center;
+   margin-top: 2rem;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 3rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #64748b;
+    border-top: 1px solid #334155;
+    padding-top: 2rem;
+}
+
+/* --- Mobile & Responsive Design --- */
+/* --- Mobile Navigation --- */
+/* Desktop */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Mobile menu button hidden by default */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  
+}
+
+.mobile-menu span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  margin: 4px 0;
+}
+
+/* Mobile links (hidden initially) */
+.nav-links-mobile {
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  background: #f1f5f9;
+  padding: 10px;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  opacity: 0.95;
+}
+.nav-links-mobile a {
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+  color: #333;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-size: 1.3rem;
+}
+
+/* Show mobile menu only on small screens */
+@media (max-width: 768px) {
+  .nav-links { 
+    display: none; 
+}
+  .mobile-menu { 
+    display: flex; 
+}
+    .nav-links-mobile { 
+        display: none;
+    }
+
+.cards-grid { 
+grid-template-columns: 1fr; 
+} 
+  .card-actions { 
+    flex-direction: column;
+ } 
+  .home-container{ 
+    padding: 1rem; 
+    margin-top: 4rem;
+ } 
+  .home-btn { 
+    width: 50%; 
+    font-size: 1rem; 
+    padding: 0.8rem; 
+}
+    
+}
+
+
